@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12203B">
+
+  <title>KartImages - Home</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/fonts.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div>
+    <nav>
+      KartImages
+    </nav>
+  </div>
+  
+
+  
+  <h1>
+    <ul>
+      <li>
+        Generate image code
+      </li>
+    </ul>
+  </h1>
+  
+  
+  
+  <!-- image category -->
+  
+  <input id="in" type="img-name" placeholder="image name">
+  <input id="ic" type="img-code" placeholder="img-code">
+  <input id="id" type="number" placeholder="id">
+  <input id="maxval" type="number" placeholder="Max Value">
+  <input id="time" type="time" placeholder="time">
+  <input id="path" type="path" placeholder="path">
+  <input id="day" type="day" placeholder="day">
+  <input id="category" type="category" placeholder="category">
+  <button onclick="btn()">make</button>
+  
+  <textarea name="" id="ih" cols="30" rows="10"></textarea>
+  <footer>
+    <a href="developers.html">Developers</a> <a href="products.html">Products</a> <a href="blog.html">Blog</a> <a href="license.html">License</a> <a href="user_base.html">user base</a>
+  </footer>
+  <!-- Project -->
+  <script>
+    
+    
+    function btn(){
+      
+      var image_n = document.getElementById('in').value;
+      var image_c = document.getElementById('ic').value;
+      var id = document.getElementById('id').value;
+      var time = document.getElementById('time').value;
+      var maxval = document.getElementById('maxval').value;
+      var path = document.getElementById('path').value;
+      var category = document.getElementById('category').value;
+      var day = document.getElementById('day').value;
+      
+      var int_id = parseInt(id);
+      var int_max = parseInt(maxval);
+      
+      
+      
+      while (int_id >= int_max){
+        
+         document.getElementById('ih').value += ('<!--0' + int_id + ' -->\n<details>\n<summary>\n<center>\n<img src="img/img_0'+int_id+'.jpeg">\n</center>\n</summary>\n<hr>\n<br>\n<br>\n Name : ' + image_n + ' 0' + int_id + ' ' + category + '\n<br><br>Day & Date : ' + day + '<br><br>\nId : 0' + int_id + '<br><br>\n<a href="img/img_0' + int_id + '.jpeg" download="' + category + ' ' + image_n + ' 0' + int_id + ' by kartimages"><button>Get now</button></a><br><br></center></details><br><hr><br>\n\n\n\n\n\n');
+        
+        int_id = int_id - 1;
+        
+      }
+      
+      
+      
+    }
+    
+    /*
+    <!-- 034 -->
+  <details>
+    <summary>
+      <center>
+        <img src="img/img_034.jpeg" alt="image code 034" id="img-034">
+      </center>
+    </summary>
+    <center>
+      <hr>
+      <br>
+      <br>
+      Name : Image 034 technology<br><br>
+      Day & Date : 04/01/2024, 15:42pm India<br><br>
+      Id : 034<br><br>
+      <a href="img/img_034.jpeg" download="Technology Image id-034 by kartimages"><button>Get now</button></a>
+      <br><br>
+    </center>
+  </details><br><hr><br>
+    */
+  </script>
+</body>
+</html> 
