@@ -1,0 +1,24 @@
+@font-face{
+  
+  font-family: bellota;
+  src: url("fonts/Bellota.ttf");
+  
+}
+@font-face {
+
+  font-family: codata;
+  src: url("fonts/Codata.ttf");
+
+}
+@font-face {
+
+  font-family: quicksans_light;
+  src: url("fonts/Quicksand-Light.otf");
+
+}
+@font-face {
+
+  font-family: bloody;
+  src: url("fonts/BloodyTerror-GOW9Z.ttf");
+
+}
